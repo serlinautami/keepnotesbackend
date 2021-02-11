@@ -14,5 +14,15 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return response()->json([
+        'status' => 1,
+        'message' => 'Selamat datang'
+    ]);
 });
+
+
+// API
+
+
+
+$router->get('/api/login', 'AuthController@login');
